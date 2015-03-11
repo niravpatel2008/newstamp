@@ -1,0 +1,295 @@
+/**
+ * Grid container
+ */
+#main {
+	margin-top: 9em;
+}
+#tiles {
+  list-style-type: none;
+  position: relative; /** Needed to ensure items are laid out relative to this container **/
+  margin: 0;
+  padding: 0;
+}
+#tiles li:hover img{
+	opacity:0.8;
+}
+/**
+ * Grid items
+ */
+#tiles li {
+ 	width: 280px;
+	background-color: #ffffff;
+	border: 1px solid #dedede;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	display: none;
+	cursor: pointer;
+	border-radius: 0.2em;
+}
+#tiles li img{
+	border-top-left-radius:0.2em;
+	border-top-right-radius:0.2em;
+}
+#tiles li.inactive {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#tiles li img {
+ 	display: block;
+	width: 100%;
+}
+
+/**
+ * Grid item text
+ */
+
+footer {
+  text-align: center;
+
+}
+
+footer a {
+  color: #435DC5;
+  text-decoration: none;
+}
+
+/**
+ * Progress bar for imagesLoaded
+ */
+.progress-bar {
+  background-color: #0BC20B;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  box-shadow: 0 1px 3px rgba(11, 194, 11, 0.2);
+  -webkit-transition: width 0.3s ease-out;
+     -moz-transition: width 0.3s ease-out;
+       -o-transition: width 0.3s ease-out;
+          transition: width 0.3s ease-out;
+}
+
+/**
+ * Placerholder css
+ */
+.wookmark-placeholder {
+          border-radius: 2px;
+     -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  z-index: -1;
+}
+
+.example-tiles {
+  position: relative; /** Needed to ensure items are laid out relative to this container **/
+  margin: 0;
+  padding: 0;
+}
+
+.example-tiles li {
+  display: block;
+  list-style-type: none;
+  float: left;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.example-tiles a,
+.example-tiles a:hover {
+  color: #555;
+  background-color: #eee;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  padding: 5px 8px;
+  border-radius: 3px;
+}
+
+.example-tiles a:hover {
+  background-color: #ddd;
+}
+/*--media Quries for 640px-monitors-*/
+@media only screen and (max-width:640px) and (min-width:480px) {
+	#main {
+		margin-top: 7em;
+	}
+}
+/*--media Quries for 480px-monitors-*/
+@media only screen and (max-width:480px) and (min-width:320px) {
+	#main {
+		margin-top: 9.5em;
+	}
+}
+/*--media Quries for 320px-monitors-*/
+@media only screen and (max-width:320px) and (min-width:240px) {
+	#main {
+		margin-top: 9em;
+	}
+	#tiles li {
+		width: 266px;
+	}
+}
+.input {
+  background: #8a8a8a;
+  font-size: 0.875em;
+  border: 0;
+  display: block;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.input:hover {
+  background: #6d6d6d;
+}
+li.input {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+.input.button {  
+ /* color: #fff;*/
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+.input.field,
+.input.border {
+  background: #f0f0f0;
+  border: 3px solid #e5e5e5;
+}
+.input.border {
+  color: #696969;
+}
+.input.border.high {
+  background: #c7e3fb;
+  border-color: #4da1e9;
+  color: #4da1e9;
+}
+.input.red {
+  background: red;
+}
+.input.red:hover {
+  background: #d84225;
+}
+.input.blue {
+  background: #4da1e9;
+}
+.input.blue:hover {
+  background: #3c89cb;
+}
+.input.dark {
+  background: #525252;
+}
+.input.dark:hover {
+  background: #3b3b3b;
+}
+.input.transparent {
+  background: #000;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+.input.transparent:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.input.primary { 
+  height: 3.429em;
+}
+a.input.primary {
+  padding-top: 1em; 
+}
+a.input.primary.border {
+  padding-top: 0.8em;
+}
+.input.secondary {
+  height: 2.714em;
+}
+.input.secondary.fixed {
+  width: 100%
+}
+.input.secondary.responsive {
+  padding-bottom: 0.65em;
+  height: auto;
+}
+a.input.secondary,
+span.input.secondary {
+  padding-top: 0.65em;
+}
+a.input.secondary.border,
+span.input.secondary.border {
+  padding-top: 0.45em;
+}
+a.input.secondary.border.responsive,
+span.input.secondary.border.responsive {
+  padding-bottom: 0.45em;
+  height: auto;
+}
+.input.tertiary {
+  height: 2.154em;
+}
+.input.tertiary.flexible {
+  padding-right: 1.077em;
+  padding-left: 1.077em;
+  display: inline-block;
+}
+a.input.tertiary {
+  padding-top: 0.35em;
+}
+a.input.tertiary.border {
+  padding-top: 0.19em;
+}
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+.stripe-white {
+  background: #fff;
+  padding: 25px 0;
+  border: 1px solid #cecece;
+  -webkit-box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+          box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+.stripe-white.big {
+  padding: 40px 0;
+}
+.stripe-dark {
+  background: #3b3b3b;
+  padding: 38px 0;
+}
+.stripe-darker {
+  background: #FFF;
+  border-top:2px solid #832311;
+  padding: 0;
+}
+.stripe-dark,
+.stripe-darker {
+  color: #832311;
+}
+.stripe-regular {
+  padding: 40px 0 60px;
+}
+.stripe-regular.collapse {
+  padding-bottom: 10px;
+}

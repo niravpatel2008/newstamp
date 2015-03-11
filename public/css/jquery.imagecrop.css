@@ -1,0 +1,16 @@
+div#image-crop-overlay {
+	background-color : #ffffff;
+	overflow : hidden;
+}
+
+div#image-crop-outline {
+	overflow : hidden;
+	border: 2px solid white;
+	display:block;
+}
+
+div.image-crop-outline {
+	overflow : hidden;
+	border: 2px solid white;
+	display:block;
+}
