@@ -26,6 +26,6 @@
 <script src="<?=public_path()?>js/front/common.js"></script>
 
 <script src="<?=public_path()?>js/front/tmpl.js"></script>
-<tmpl id='stamp_wrapper_tmpl' data-id="stamp_wrapper" data-type="text/x-jquery-tmpl" data-script="<?=public_path()?>tmpl/stamp.tmpl"/>
-<tmpl id='album_wrapper_tmpl' data-id="album_wrapper" data-type="text/x-jquery-tmpl" data-script="<?=public_path()?>tmpl/album.tmpl"/>
+<tmpl id='stamp_wrapper_tmpl' data-id="stamp_wrapper" data-type="text/x-jquery-tmpl" data-script="<?=public_path()?>tmpl/stamp.tmpl"></tmpl>
+<tmpl id='album_wrapper_tmpl' data-id="album_wrapper" data-type="text/x-jquery-tmpl" data-script="<?=public_path()?>tmpl/album.tmpl"></tmpl>
 <script src='<?=public_path()?>js/front/<?=$view?>.js'></script>
