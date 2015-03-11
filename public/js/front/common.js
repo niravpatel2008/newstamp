@@ -198,7 +198,7 @@ $(document).ready(function() {
 function loadTmpl(tplid)
 {
 	var $tmplDom = $('#'+tplid);
-	if ($($tmplDom.data('id')).length == 0)
+	if ($("#"+$tmplDom.data('id')).length == 0)
 	{
 		var src = $tmplDom.data('script');
 		$.get(src,{},function(tmpl){
