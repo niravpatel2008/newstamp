@@ -1,3 +1,4 @@
+<script id='stamp_wrapper' type='text/x-jquery-tmpl'>
 <div class="col-md-2 col-masonry" style="position: absolute; left: 0px; top: 0px;">
   <div class="product-thumb">
     <header class="product-header">
@@ -44,3 +45,4 @@
     {{/if}}
   </div>
 </div>
+</script>

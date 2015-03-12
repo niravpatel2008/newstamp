@@ -194,7 +194,7 @@ $(document).ready(function() {
 
 });
 
-
+/*
 function loadTmpl(tplid)
 {
 	var $tmplDom = $('#'+tplid);
@@ -209,7 +209,7 @@ function loadTmpl(tplid)
 		})
 	}
 }
-
+*/
 
 function getStamps(curPage)
 {
@@ -232,7 +232,7 @@ function getStamps(curPage)
 
 	var data =  {from:from,page:page,limit:limit,hdnTag:hdnTag,searchKeyword:searchKeyword,hdnUid:hdnUid};
 	isAjaxLoad = true;
-	loadTmpl("stamp_wrapper_tmpl");
+	//loadTmpl("stamp_wrapper_tmpl");
 	$.post(url,data,function(e){
 		if(e != ""){
 			isAjaxLoad = false;
