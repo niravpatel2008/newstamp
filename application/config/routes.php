@@ -54,7 +54,7 @@ $route['user/(:any)'] = "index/index/$1";
 $route['getstamps'] = "index/getStamp";
 $route['getstamps/(:any)'] = "index/getStamp/$1";
 
-$route['album'] = "index/album";
+//$route['album'] = "index/album";
 
 $route['signup'] = "index/signup";
 $route['login'] = "index/login";
