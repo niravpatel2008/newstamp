@@ -14,6 +14,28 @@ $(document).ready(function(){
 		});
 	  }
 	};
+	$('#btnDeleteUserAlbum').click(function(){
+		var i = confirm("Are you sure want to Delete this Album");
+		if(i)
+		{
+			var del_id = $('#al_id').val();
+			$.ajax({
+				type: 'post',
+				url: base_url()+'album/delete',
+				data: 'al_id='+del_id+'&from=listview',
+				success: function (data) {
+					if (data == "success")
+					{
+						alert('Album deleted successfully.');
+						location.href=base_url()+"profile";
+					}
+					else
+						alert('An error occurred while processing.');
+				}
+			});
+			
+		}
+	});
 
 	initCrop();
 
@@ -31,7 +53,8 @@ $(document).ready(function(){
 							needHtml = "<button class='btn btn-primary btn-flat' style='margin-left:14px;' id='btn_createstamp'>Create Stamp</button></center>";
 						}
 
-						html = "<img src='"+file.path+"' id='albumImg' class='newimgFull' imgid = '"+file.id+"'>";
+						var html = "";
+						html += "<img src='"+file.path+"' id='albumImg' class='newimgFull' imgid = '"+file.id+"'>";
 						html += "<br>";
 						html += "<center><a class='removeimage' link_id='"+file.id+"' href='#'><i class='fa fa-trash-o'></i></a>"+needHtml;
 						$("#img-container").html(html);
@@ -56,7 +79,7 @@ $(document).ready(function(){
 		var cnf = confirm("All Associated Stamps with this Album will be deleted. Do You want to Continue ?");
 		if(cnf == true)
 		{
-			url = admin_path()+'album/delete',
+			url = base_url()+'album/delete',
 			data = {link_id:link_id,from:'addedit',al_id:$('#al_id').val()};
 			$.post(url,data,function(e){
 				if (e == "success") {
@@ -91,7 +114,7 @@ $(document).ready(function(){
 		var country = $('#al_country').val();
 		var al_uid = $('#al_uid').val();
 		
-		url = admin_path()+'album/createStamp',
+		url = base_url()+'album/createStamp',
 		data = {stampJson:cropJson,mainimg:mainSrc,al_id:al_id,al_name:albumName,al_price:price,al_country:country,al_uid:al_uid};
 		$.post(url,data,function(e){
 			if (e == "success") {
@@ -129,7 +152,7 @@ function initCrop()
 		overlayOpacity : 0.25,
 //		selections : [{"x":"125px","y":"78px","w":50,"h":50},{"x":"114px","y":"169px","w":73,"h":131},{"x":"277px","y":"167px","w":126,"h":65},{"x":"335px","y":"275px","w":50,"h":50},{"x":"416px","y":"7px","w":50,"h":50}]
 		selections : JSON.parse("["+stampJson+"]")
-	});console.log($cropObj);
+	});//console.log($cropObj);
 }
 function doOrderImage(){
 	var order = {};

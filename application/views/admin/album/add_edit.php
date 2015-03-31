@@ -103,9 +103,8 @@
 		<?php }?>
     </div>
 	<div class='row'>
-		<ul id='img-container' class='list-unstyled clearfix'>
+		<div id='img-container' class='clearfix'>
 			<?php if(@$ticket_links[0]->link_id != "") {?>
-			<li class='pull-left'>
 			<img id="albumImg" src='<?=(base_url()."uploads/stamp/".@$ticket_links[0]->link_url)?>' class='newimgFull' imgid = '<?=(@$ticket_links[0]->link_id)?>'>
 			<br>
 			<?php if(@$updateBtn) {?>
@@ -114,9 +113,8 @@
 					<button class="btn btn-primary btn-flat" style="margin-left:14px;" id="btn_createstamp">Update Stamp</button>
 				</center>
 			<?php }?>
-			</li>
 			<?php } ?>
-		</ul>
+		</div>
 	</div>
 	<div class='row'>
 			<div class="form-group" style="margin-left:17px;">

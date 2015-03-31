@@ -37,3 +37,11 @@
     <link rel="alternate stylesheet" type="text/css" href="<?=public_path()?>css/front/blaze-orange.css" title="blaze-orange" media="all" />
     <link rel="alternate stylesheet" type="text/css" href="<?=public_path()?>css/front/hot-pink.css" title="hot-pink" media="all" />
     <!-- END Demo Examples -->
+	<?php if(in_array($this->router->fetch_class(),array('profile','userstamp','album'))){?>
+		<link rel="stylesheet" href="<?=public_path()?>css/BOOTSTRAP_RESET.css">
+		<link href="<?=public_path()?>css/tagedit/jquery.tagedit.css" rel="stylesheet" type="text/css" />
+		<link href="<?=public_path()?>css/dropzone.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="<?=public_path()?>css/jQueryUI/jquery-ui-1.10.3.custom.css">
+		<link href="<?=public_path()?>css/jquery.imagecrop.css" media="screen" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="<?=public_path()?>css/styleProfile.css">
+	<?php } ?>
