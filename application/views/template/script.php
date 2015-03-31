@@ -29,3 +29,15 @@
 <script src='<?=public_path()?>js/front/<?=$view?>.js'></script>
 
 <?php $this->load->view('tmpl/stamp');?>
+
+<?php 
+	if (in_array($this->router->fetch_method(), array("add","edit"))) { ?>
+		<script src="<?=public_path()?>js/jquery-ui-1.10.3.js" type="text/javascript"></script>
+		<script src="<?=public_path()?>js/plugins/tagedit/jquery.autoGrowInput.js" type="text/javascript"></script>
+		<script src="<?=public_path()?>js/plugins/tagedit/jquery.tagedit.js" type="text/javascript"></script>
+		<script src="<?=public_path()?>js/plugins/dropzone/dropzone.js" type="text/javascript"></script>
+	<?php }
+	
+	if(in_array($this->router->fetch_class(),array('album'))) { ?>
+		<script src="<?=public_path()?>js/plugins/imageCrop/imagecrop.js" type="text/javascript"></script>
+	<?php }?>

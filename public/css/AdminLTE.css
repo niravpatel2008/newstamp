@@ -3432,3 +3432,9 @@ fieldset[disabled] .btn-vk.active {
 
 #dealsTable .active {color:green;}
 #dealsTable .inactive {color:red;}
+
+.newimgFull{
+	max-width:none;
+	height:100%;
+	width:100%;
+}
