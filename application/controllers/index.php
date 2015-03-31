@@ -242,7 +242,9 @@ class Index extends CI_Controller {
 			if(isset($post['searchKeyword']) && $post['searchKeyword'] != '')
 			{
 				$where = array('t_tags like'=> '%'.$post['searchKeyword'].'%');
-				$orwhere = array('t_name like' => '%'.$post['searchKeyword'].'%' , 't_bio like' => '%'.$post['searchKeyword'].'%' ,'t_ownercountry like' => '%'.$post['searchKeyword'].'%' );
+				$orwhere = array('t_name like' => '%'.$post['searchKeyword'].'%' , 
+												   't_bio like' => '%'.$post['searchKeyword'].'%' ,
+												   't_ownercountry like' => '%'.$post['searchKeyword'].'%' );
 			}
 
 			if(isset($post['hdnUid']) && $post['hdnUid'] != '')
@@ -270,7 +272,7 @@ class Index extends CI_Controller {
 				echo json_encode($finalResArr);exit;	
 			}
 			else
-				echo "{}";
+				echo "";
 	}
 }
 
