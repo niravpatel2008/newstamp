@@ -3,20 +3,20 @@
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1">
 			<div class="text-center">
-				<h1>Explore Best Deals in Your City</h1>
+				<h1>Explore Stamps here..</h1>
 				<p class="text-bigger">Augue feugiat vulputate quam at dignissim aliquam vestibulum elit convallis iaculis dictumst dui taciti himenaeos taciti arcu non sollicitudin viverra id blandit cursus ac et mauris curabitur tortor feugiat nulla</p>
 			</div>
 		</div>
 	</div>
 	<div class="gap"></div>
 </div>		
-<form class="search-area form-group">
+<form class="search-area form-group"  id="frmSearchStamp">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-11 clearfix">
 				<label><i class="fa fa-search"></i></label>
 				<div class="search-area-division search-area-division-input">
-					<input class="form-control" type="text" placeholder="Search stamp" />
+					<input id="txtSearchStamp" class="form-control" type="text" placeholder="Search stamp" />
 				</div>
 			</div>
 			<div class="col-md-1">
@@ -26,7 +26,7 @@
 				<input type="hidden" id="hdnSearchUid" name="hdnSearchUid" value="<?=$hdnUid;?>" />
 				<input type="hidden" id="hdnTag" name="hdnTag" value="<?=$hdnTag;?>" />
 				<input type="hidden" id="searchKeyword" name="searchKeyword" value="<?=$searchKeyword;?>" />
-				<button class="btn btn-block btn-white search-btn" type="submit">Search</button>
+				<button class="btn btn-block btn-white search-btn" id="btnSearchStamp" type="submit">Search</button>
 			</div>
 		</div>
 	</div>
