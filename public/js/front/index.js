@@ -20,14 +20,17 @@ $(document).ready(function(){
 			return;
     });
 	
-	$('#frmSearchStamp').submit(function(e){
+	$('#btnSearchStamp').on('click',function(e){
 		e.preventDefault();
 		if($('#txtSearchStamp').val() == null || $('#txtSearchStamp').val() == '')
 	{
 		alert("please fill up seach criteria first..");
 		return false;
 	}else
-		$(this).submit();
+		{
+		$('form#frmSearchStamp').submit();
+		return true;
+		}
 	});
 	
 	
