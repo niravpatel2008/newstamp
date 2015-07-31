@@ -10,15 +10,21 @@
 	</div>
 	<div class="gap"></div>
 </div>		
-<form class="search-area form-group"  id="frmSearchStamp">
+<form class="search-area form-group"  id="frmSearchStamp" method="get">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-11 clearfix">
 				<label><i class="fa fa-search"></i></label>
 				<div class="search-area-division search-area-division-input">
-					<input id="txtSearchStamp" class="form-control" type="text" placeholder="Search stamp" />
+					<input name="search" id="txtSearchStamp" class="form-control" type="text" placeholder="Search stamp" value="<?=$searchKeyword;?>"/>
 				</div>
 			</div>
+			<div class="col-md-1">
+				<button class="btn btn-block btn-white search-btn" id="btnSearchStamp" type="submit">Search</button>
+			</div>
+		</div>
+	</div>
+</form>
 			<div class="col-md-1">
 				<input type="hidden" id="hdnCurrPage" name="hdnCurrPage" value="1" />
 				<input type="hidden" id="hdnRecLimit" name="hdnRecLimit" value="21" />
@@ -26,11 +32,7 @@
 				<input type="hidden" id="hdnSearchUid" name="hdnSearchUid" value="<?=$hdnUid;?>" />
 				<input type="hidden" id="hdnTag" name="hdnTag" value="<?=$hdnTag;?>" />
 				<input type="hidden" id="searchKeyword" name="searchKeyword" value="<?=$searchKeyword;?>" />
-				<button class="btn btn-block btn-white search-btn" id="btnSearchStamp" type="submit">Search</button>
 			</div>
-		</div>
-	</div>
-</form>
 <?php 
 	if(isset($uinfoArr) && !empty($uinfoArr))
 	{
