@@ -1,26 +1,28 @@
+<?php pr($details);?>
 <div class="row">
 	<div class="col-lg-9 col-md-8">
 		<div class="content-box">
 			<div class="trick-user">
 				<div class="trick-user-image">
-					<img class="user-avatar" src="<?=$details['stamp_photo'];?>">
+					<img class="user-avatar" src="<?php echo $details['stamp_photo'];?>">
 				</div>
 				<div class="trick-user-data">
 					<h1 class="page-title">
-						<?= $details['t_name'];?>
+						<?php echo  $details['t_name'];?>
 					</h1>
 					<div>
-						Posted by <b><a href="#"><?= $details['user_fullname'];?></a></b> - <?= $details['t_modified_date'];?>
+						Posted by <b><a href="#"><?php echo  $details['user_fullname'];?></a></b> - <?php echo  $details['t_modified_date'];?>
 					</div>
 				</div>
 			</div>
 			
 			<pre>
 				<code class="php">
-					<span class=""><?=$details['t_bio'];?></span>
+					<span class=""><?php echo $details['t_bio'];?></span>
 				</code>
 			</pre>
 
+			<?php if(isset($details['all_photos']) && !empty($details['all_photos'])){?>
 			<div>
 				<h1 class="page-title">View All Stamps Here :-</h1>
 				<?php
@@ -29,6 +31,7 @@
 				?>
 				
 			</div>
+			<?php }?>
 		</div>
 	</div>
 	<div class="col-lg-3 col-md-4">

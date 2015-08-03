@@ -8,20 +8,24 @@ class StampDetail extends CI_Controller {
 		$this->front_session = $this->session->userdata('front_session');
 	}
 
-	public function viewDetail()
+	public function viewDetail($l)
 	{
 		$post = $this->input->post();
 		$uploadpath = base_url()."uploads/stamp/";
 		$where = array();
-		if(isset($_GET['tid']) && ($_GET['tid'] != '' || $_GET['tid'] != 0))
-			$where = array('t_id'=> $_GET['tid']);
+		/*if(isset($_GET['tid']) && ($_GET['tid'] != '' || $_GET['tid'] != 0))
+			$where = array('t_id'=> $_GET['tid']);*/
+		$stId = $this->uri->segment(3);
+		if(isset($stId) && ($stId != '' || $stId != 0))
+			$where = array('t_id'=> $stId);
 		$sortBy = (isset($post) && isset($post['sortBy']))?$post['sortBy']:"t_modified_date";
 		$sortType = (isset($post) && isset($post['sortType']))?$post['sortType']:"ASC";
 		$page = (isset($post) && isset($post['page']))?$post['page']:1;
 		$limit = (isset($post) && isset($post['limit']))?$post['limit']:'';
 		$selectFields_stamp = (isset($post) && isset($post['selectFields_stamp']))?$post['selectFields_stamp']:"*";
 		$selectFields_users = (isset($post) && isset($post['selectFields_users']))?$post['selectFields_users']:'';
-		
+//pr($this->uri->segment(3));		
+//pr($where);die;
 		## Get all details info of Stamp & users
 		$stampRes = $this->common_model->searchStamp($selectFields_stamp,$selectFields_users,$where,$sortBy,$sortType,$page,$limit);
 		//pr($stampRes,1);

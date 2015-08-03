@@ -62,6 +62,6 @@ $route['forgotpassword'] = "index/forgotpassword";
 #$route['profile/myalbum/(:any)'] = "useralbum/edit/$1";
 
 ##$route['profile/album/(:any)'] = "profile/album/$1";
-
+$route['stampDetail/viewDetail/(:any)'] = "stampDetail/viewDetail/$1";
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
